@@ -3,7 +3,7 @@ import os
 
 admin_router = Router()
 
-ADMIN_ID = int(os.getenv("ADMIN_ID"))
+ADMIN_ID = (os.getenv("ADMIN_ID"))
 
 @admin_router.message(F.text ==  "⚙️ Админка", F.from_user.id == ADMIN_ID)
 async def admin(message: types.Message):
